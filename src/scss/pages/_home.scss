@@ -1,29 +1,12 @@
-//Utils
-.container {
-	width: 100%;
-	padding: 0 1.5rem;
-}
-
-.hidden {
-	display: none !important;
-}
-
-.flex {
-	display: flex;
-}
-
-.justify-between {
-	justify-content: space-between;
-}
-.item-center {
-	align-items: center;
-}
-
 //Home Page
 .navbar {
 	background-image: url("../../../public/hero-bg.jpg");
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 	height: 700px;
+
+	&.clip-path-none {
+		clip-path: none;
+	}
 
 	& nav {
 		display: flex;
@@ -32,11 +15,13 @@
 	}
 
 	&__logo {
+		z-index: 10;
 		& img {
 			height: 36px;
 			width: auto;
 			@media (min-width: 768px) {
 				height: auto;
+				z-index: auto;
 			}
 		}
 	}
@@ -58,14 +43,15 @@
 			height: 100vh;
 			width: 100%;
 			margin: 0;
-			padding: 4rem 1rem;
+			padding: 5rem 1rem;
 			background: black;
 		}
 	}
 
 	&__feature-links {
 		list-style: none;
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 
 		& li {
 			& a {
@@ -75,11 +61,22 @@
 				cursor: pointer;
 			}
 			&:not(:last-child) {
-				margin-right: 1.5rem;
+				margin-bottom: 1rem;
+			}
+		}
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(4, 1fr);
+
+			& li {
+				&:not(:last-child) {
+					margin-right: 1.5rem;
+					margin-bottom: 0rem;
+				}
 			}
 		}
 	}
 
+	//Menu Start
 	&__menu {
 		background: rgb(8, 20, 25);
 		background: linear-gradient(140deg, rgba(8, 20, 25, 1) 0%, rgba(70, 80, 85, 1) 100%);
@@ -97,6 +94,7 @@
 		& ul {
 			list-style: none;
 			display: flex;
+			flex-wrap: wrap;
 
 			& .button {
 				padding: 0.5rem 1rem;
@@ -155,7 +153,6 @@
 
 		&.hidden-menubar {
 			padding: 0;
-			// background: transparent;
 
 			& .navbar__menu--search {
 				width: 100%;
@@ -177,7 +174,6 @@
 					width: 100%;
 					display: flex;
 					align-items: center;
-					min-width: 500px;
 
 					& .input-container {
 						width: 100%;
@@ -219,12 +215,7 @@
 					width: 100%;
 					height: 100%;
 					border-radius: 14px;
-					background: linear-gradient(
-						135deg,
-						rgba(19, 35, 43, 0.7) 0%,
-						rgba(109, 102, 95, 0.7) 50%,
-						rgba(144, 113, 73, 0.7) 100%
-					);
+					background: linear-gradient(135deg, rgba(19, 35, 43, 0.7) 0%, rgba(109, 102, 95, 0.7) 50%, rgba(144, 113, 73, 0.7) 100%);
 					box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 					backdrop-filter: blur(3.5px);
 					-webkit-backdrop-filter: blur(3.5px);
@@ -322,8 +313,11 @@
 		}
 	}
 
+	//Menu end
+
 	&__action-menu {
 		display: flex;
+		z-index: 100;
 
 		& button {
 			background-color: transparent;
@@ -355,6 +349,7 @@
 		}
 
 		@media (min-width: 768px) {
+			z-index: auto;
 			& button {
 				&:not(:last-child) {
 					margin-right: 1.5rem;
