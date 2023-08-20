@@ -1,0 +1,14 @@
+.button {
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+	padding: 4px 8px;
+	color: #fff;
+  cursor: pointer;
+
+	& i {
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+}

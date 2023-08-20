@@ -1,0 +1,55 @@
+.form-field {
+	display: block;
+	width: 100%;
+	padding: 8px 16px;
+	line-height: 25px;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: inherit;
+	border-radius: 6px;
+	-webkit-appearance: none;
+	color: #fff;
+	border: 1px solid transparent;
+	background: transparent;
+	transition: border 0.3s ease;
+
+	&:focus {
+		outline: none;
+		border-color: transparent;
+	}
+}
+
+.form-group {
+	position: relative;
+	display: flex;
+	width: 100%;
+	& > span,
+	.form-field {
+		white-space: nowrap;
+		display: block;
+	}
+	.form-field {
+		position: relative;
+		z-index: 1;
+		flex: 1 1 auto;
+		width: 1%;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	& > span {
+		text-align: center;
+		padding: 8px 12px;
+		font-size: 14px;
+		line-height: 25px;
+		color: #ffffffa5;
+		background: transparent;
+		border: 1px solid transparent;
+	}
+	&:focus-within {
+		& > span {
+			color: #ffffffa5;
+			background: transparent;
+			border-color: transparent;
+		}
+	}
+}

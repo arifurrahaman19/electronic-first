@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronic First - Xbox, Playstation, Games, Software Keys</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./dist/bundle.css">
+</head>
+
+<body>
+  <section class="navbar">
+    <div class="container">
+      <nav>
+        <div class="navbar__logo">
+          <img src="./public/logo.webp" alt="">
+        </div>
+        <div class="navbar__menu-bar">
+          <ul class="navbar__feature-links">
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Pre-orders</a></li>
+            <li><a href="#">Upcoming</a></li>
+            <li><a href="#">Support 24/7</a></li>
+          </ul>
+          <div class="navbar__menu"> <!-- hidden-menubar -->
+            <div class="navbar__menu--container">
+              <ul> <!-- hidden -->
+                <li>
+                  <button class="button">
+                    <i class="fa-solid fa-desktop"></i><span>PC</span>
+                    <i class="fa-solid fa-angle-down"></i></button>
+                </li>
+                <li>
+                  <button class="button">
+                    <i class="fa-brands fa-playstation"></i><span>Playstation</span>
+                    <i class="fa-solid fa-angle-down"></i></button>
+                </li>
+                <li>
+                  <button class="button">
+                    <i class="fa-brands fa-xbox"></i><span>Xbox</span>
+                    <i class="fa-solid fa-angle-down"></i></button>
+                </li>
+                <li>
+                  <button class="button">
+                    <img src="./public/nintendo.svg" alt="">
+                    <span>Nintendo</span>
+                    <i class="fa-solid fa-angle-down"></i></button>
+                </li>
+              </ul>
+              <div class="navbar__menu--search">
+                <div class="search-container">
+                  <button class="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                  <!-- Show when click on search button -->
+                  <div class="input-container hidden">
+                    <div class="form-group">
+                      <input class="form-field" type="text" placeholder="Minecraft, RPG, multiplayer...">
+                      <span>Advanced search</span>
+                    </div>
+                    <div class="close">
+                      <button class="button">
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar__menu--megamenu hidden">
+              <div class="megamenu__container">
+                <div class="group-title flex justify-between item-center">
+                  <h4>Platforms</h4>
+                  <button class="button">View all</button>
+                </div>
+                <div class="megamenu__platforms">
+                  <ul>
+                    <li>
+                      <button class="item button">
+                        <img src="./public/steam.svg" alt="">
+                        <p>Steam</p>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="item button">
+                        <img src="./public/Ubisoft_logo.svg" alt="">
+                        <p>Ubisoft Connect</p>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="item button">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Electronic-Arts-Logo.svg" alt="">
+                        <p>EA App</p>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="item button">
+                        <img src="./public/steam.svg" alt="">
+                        <p>Battle.net</p>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="item button">
+                        <img src="./public/steam.svg" alt="">
+                        <p>Rockstar</p>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="item button">
+                        <img src="./public/steam.svg" alt="">
+                        <p>GOG.com</p>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="item button">
+                        <img src="./public/steam.svg" alt="">
+                        <p>Microsoft Store</p>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="item button">
+                        <img src="./public/steam.svg" alt="">
+                        <p>Epic</p>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="group-title flex justify-between item-center">
+                  <h4>Prepaid cards</h4>
+                  <button class="button">View all</button>
+                </div>
+
+                <div class="megamenu__prepaid-cards">
+                  <ul>
+                    <li>
+                      <button class="item button">
+                        <img src="./public/steam-logo.png" alt="">
+                        <p>Steam Gift Cards</p>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="item button">
+                        <img src="./public/IG_Logo.svg" alt="">
+                        <p>Steam Gift Cards</p>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="item button">
+                        <img src="./public/blizzard.svg" alt="">
+                        <p>Blizzard Gift Cards</p>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar__action-menu">
+          <button>
+            <i class="fa-solid fa-basket-shopping"></i>
+          </button>
+          <button>
+            <i class="fa-regular fa-user"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div class="navbar__hero-section">
+      <div class="navbar__hero-section--container flex">
+        <div class="navbar__hero-section--left">
+          <p>In 15 days</p>
+          <h2>Starfield Digital Premium <br>Edition + Early Access</h2>
+          <div class="flex item-center">
+            <h6>-25%</h6>
+            <h4>74.89€</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>
