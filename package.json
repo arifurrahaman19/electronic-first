@@ -1,4 +1,7 @@
 {
+	"name": "electronic-first",
+	"version": "1.0.0",
+	"private": true,
 	"devDependencies": {
 		"webpack": "^5.88.2",
 		"webpack-cli": "^5.1.4"

@@ -19,18 +19,18 @@
     <div class="container">
       <nav>
         <div class="navbar__logo">
-          <img src="./public/logo.webp" alt="">
+          <a href="#"><img src="./public/logo.webp" alt=""></a>
         </div>
-        <div class="navbar__menu-bar">
+        <div class="navbar__menu-bar hidden">
           <ul class="navbar__feature-links">
             <li><a href="#">Trending</a></li>
             <li><a href="#">Pre-orders</a></li>
             <li><a href="#">Upcoming</a></li>
             <li><a href="#">Support 24/7</a></li>
           </ul>
-          <div class="navbar__menu"> <!-- hidden-menubar -->
+          <div id="menubar" class="navbar__menu">
             <div class="navbar__menu--container">
-              <ul> <!-- hidden -->
+              <ul class="navmenu-list">
                 <li>
                   <button class="button">
                     <i class="fa-solid fa-desktop"></i><span>PC</span>
@@ -55,17 +55,16 @@
               </ul>
               <div class="navbar__menu--search">
                 <div class="search-container">
-                  <button class="button">
+                  <button id="search-btn" class="button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
-                  <!-- Show when click on search button -->
                   <div class="input-container hidden">
                     <div class="form-group">
                       <input class="form-field" type="text" placeholder="Minecraft, RPG, multiplayer...">
                       <span>Advanced search</span>
                     </div>
                     <div class="close">
-                      <button class="button">
+                      <button id="search-close-btn" class="button">
                         <i class="fa-solid fa-xmark"></i>
                       </button>
                     </div>
@@ -73,7 +72,7 @@
                 </div>
               </div>
             </div>
-            <div class="navbar__menu--megamenu hidden">
+            <div id="megamenu" class="navbar__menu--megamenu hidden">
               <div class="megamenu__container">
                 <div class="group-title flex justify-between item-center">
                   <h4>Platforms</h4>
@@ -171,6 +170,9 @@
           <button>
             <i class="fa-regular fa-user"></i>
           </button>
+          <button id="mobile-menu" class="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
       </nav>
     </div>
@@ -188,7 +190,7 @@
       </div>
     </div>
   </section>
-  <script src="./src/js/main.js"></script>
+  <script type="module" src="./src/js/main.js"></script>
 </body>
 
 </html>
