@@ -4,6 +4,7 @@ const selectElement = (selector, all = false) => {
 };
 
 //Select Elements
+const navbarBarWrapper = selectElement(".navbar");
 const navbarMenu = selectElement(".navbar__menu");
 const navbarList = selectElement(".navmenu-list");
 const searchBtn = selectElement("#search-btn");
@@ -14,6 +15,7 @@ const megamenuContainer = selectElement(".navbar__menu--megamenu");
 const navbarMenus = selectElement(".navmenu-list li button", true);
 const navbarMenusListItm = selectElement(".navmenu-list li", true);
 const mobileMenuBtn = selectElement("#mobile-menu");
+const mobileMenuBtnClose = selectElement("#mobile-menu-close");
 const mainMenubar = selectElement(".navbar__menu-bar");
 
 // Functions
@@ -53,8 +55,19 @@ function showMegaMenu(indx, e) {
 }
 
 function mobileMenuButtonHandler() {
+	navbarBarWrapper.classList.add("clip-path-none");
 	mainMenubar.classList.remove("hidden");
 	mainMenubar.classList.add("mobile-menu-style");
+	mobileMenuBtn.classList.add("hidden");
+	mobileMenuBtnClose.classList.remove("hidden");
+}
+
+function mobileMenuCloseButtonHandler() {
+	navbarBarWrapper.classList.remove("clip-path-none");
+	mainMenubar.classList.add("hidden");
+	mainMenubar.classList.remove("mobile-menu-style");
+	mobileMenuBtn.classList.remove("hidden");
+	mobileMenuBtnClose.classList.add("hidden");
 }
 
 // Add click event in all menu items
@@ -67,6 +80,7 @@ navbarMenus.forEach((itm, i) => {
 searchBtn.addEventListener("click", searchButtonHandler);
 searchCloseBtn.addEventListener("click", searchCloseButtonHandler);
 mobileMenuBtn.addEventListener("click", mobileMenuButtonHandler);
+mobileMenuBtnClose.addEventListener("click", mobileMenuCloseButtonHandler);
 
 // Hide megamenu when clicked outside
 document.addEventListener("click", (evt) => {
